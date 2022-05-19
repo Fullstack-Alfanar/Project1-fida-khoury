@@ -1,0 +1,149 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+body {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* styling paper */
+.paper {
+    width: 600px;
+    height: 250px;
+    position: relative;
+    margin: 20px auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #888;
+}
+
+/* styling red vertical line */
+.paper::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+/* styling blue horizontal lines */
+.pattern {
+    height: 100%;
+    background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+
+/* styling text content */
+.content,
+.noteContent {
+    padding-top: 2px;
+    padding-left: 26px;
+    padding-right: 16px;
+    line-height: 25px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 25px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+/* styling the headline of the whole page*/
+.headline {
+    display: flex;
+    justify-content: center;
+    color: dimgray;
+    font-family: 'Indie Flower', cursive;
+    border: 4px;
+    border-style: solid;
+    border-color: dimgrey;
+    margin: 10px;
+}
+
+/* styling the input of the reminder content */
+.noteContent {
+    border: hidden;
+    background-color: unset;
+    width: 450px;
+    height: 200px;
+}
+
+/* styling the div of the reminder content buttons and date*/
+
+.remiButtons,
+.remiDate {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* styling the reminder content buttons*/
+
+.AddRemi,
+.resetInfo {
+    padding: 10px;
+    font-size: 20px;
+    margin: 5px;
+    font-family: 'Indie Flower', cursive;
+    background-color: #E0BBE4;
+    color: white;
+    border: 5px;
+    font: bold;
+    border-style: double;
+    border-color: white;
+    border-radius: 10%;
+
+}
+
+/*styling the time and date inputs */
+.wantedRdate,
+.wantedRtime {
+    padding: 10px;
+    font-size: 10px;
+    margin: 5px;
+    font-family: 'Indie Flower', cursive;
+    background-color: #E0BBE4;
+}
+/*styling all labels */
+label{
+    padding: 10px;
+    font-size: 20px;
+    margin: 5px;
+    font-family: 'Indie Flower', cursive;
+}
+
+/*styling all hr */
+hr{
+    margin-top: 70px;
+    color: dimgray;
+    width:100%;
+    height: 4px;
+background-color: dimgray;
+}
+/* styling the div of the reminders that i add*/
+.remindersDiv{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.reminderImg{
+    background-image: url("/stickynote.png");
+    height: 350px;
+    width: 350px;
+    font-display: flex;
+    justify-content: center;
+}
+
+
+.RemiContent{
+    
+    height: 160px;
+    width: 160px;
+    padding: 20px; 
+    margin: 80px;  
+     border: hidden;
+    background-color: unset;
+}

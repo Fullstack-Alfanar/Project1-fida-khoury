@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders</title>
+    <link rel="stylesheet" href="style\style.css">
+</head>
+
+<body>
+
+    <div class="MainDiv" id="MainDiv">
+        <div class="headline">
+            <h1>My reminders Board</h1>
+        </div>
+
+        <div class="paper">
+            <div class="pattern">
+                <div class="content">
+                    <div>
+                        <textarea class="noteContent" id="noteContent" placeholder="Take a note ... " cols="38" rows="8"
+                            required></textarea>
+                    </div>
+                    <div class="remiDate">
+                        <label class="lbl">Reminder date and time:</label>
+                        <input type="date" class="wantedRdate" id="wantedRdate" value="dd/mm/yyyy" required>
+                        <input type="time" class="wantedRtime" id="wantedRtime" value="hh:mm am/pm" required>
+                    </div>
+                    <div class="remiButtons">
+                        <input type="submit" class="AddRemi" id="AddRemi" value="Add reminder" onclick="AddReminder()">
+                        <input type="reset" class="resetInfo" id="resetInfo" value="Reset Information">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div>
+            <hr>
+        </div>
+        <div class="remindersDiv" id="remindersDiv">
+
+            <div hidden class="reminderImg">
+                <textarea class="RemiContent" id="RemiContent" placeholder="Take a note ... " cols="8" rows="5">
+                </textarea>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
