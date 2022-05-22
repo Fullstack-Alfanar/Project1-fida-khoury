@@ -1,8 +1,37 @@
 /* Google font */
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+.errorMsg {
+    display: none;
+}
+
+/* Extra small devices (phones, 600px and down) nothing will be showing  */
+@media only screen and (max-width: 600px) {
+    body {
+        display: none;
+    }
+    .errorMsg {
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/*styling the main div*/
+.MainDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: center;
+}
 
 
+
+/*styling the  body*/
 body {
     background-color: rgba(0, 0, 0, 0.1);
 }
@@ -99,14 +128,15 @@ body {
 /*styling the time and date inputs */
 .wantedRdate,
 .wantedRtime {
-    padding: 10px;
-    font-size: 10px;
+    padding: 5px;
+    font-size: 15px;
     margin: 5px;
     font-family: 'Indie Flower', cursive;
     background-color: #E0BBE4;
 }
+
 /*styling all labels */
-label{
+label {
     padding: 10px;
     font-size: 20px;
     margin: 5px;
@@ -114,36 +144,83 @@ label{
 }
 
 /*styling all hr */
-hr{
+hr {
     margin-top: 70px;
     color: dimgray;
-    width:100%;
     height: 4px;
-background-color: dimgray;
+    background-color: dimgray;
 }
+
 /* styling the div of the reminders that i add*/
-.remindersDiv{
+.remindersDiv {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+/*creating the fadeing transaction*/
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
 
-.reminderImg{
+    to {
+        opacity: 1;
+    }
+}
+
+/*stayling the reminder task/image*/
+.reminderImg {
     background-image: url("/stickynote.png");
     height: 350px;
     width: 350px;
-    font-display: flex;
-    justify-content: center;
+    animation: 4s linear fadein;
+
 }
 
 
-.RemiContent{
-    
+/*styling the contant after when its added*/
+.RemiContent {
+
     height: 160px;
     width: 160px;
-    padding: 20px; 
-    margin: 80px;  
-     border: hidden;
-    background-color: unset;
+    padding: 5px;
+    margin-left: 90px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+}
+
+/*styling the div of date after when its added*/
+
+.wantedDate {
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+/*styling the date and tiem input after when its added*/
+
+.Rdate,
+.Rtime {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+
+}
+
+/* i used the id to refer to btn becaude the class is used from the boostrap */
+.deleteButton {
+    display: none;
+}
+
+/*styling the hover for the delete button when i hover on the tast the trash button shown*/
+.reminderImg:hover .deleteButton {
+    margin-right: 66px;
+    display: flex;
+    flex-direction: row-reverse;
 }

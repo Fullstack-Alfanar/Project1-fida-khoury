@@ -7,10 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reminders</title>
     <link rel="stylesheet" href="style\style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
 </head>
 
 <body>
-
+    <div class="errorMsg">
+        <h2 > please use bigger screen or on lansacbe , thankyou.</h2>
+    </div>
     <div class="MainDiv" id="MainDiv">
         <div class="headline">
             <h1>My reminders Board</h1>
@@ -25,8 +29,8 @@
                     </div>
                     <div class="remiDate">
                         <label class="lbl">Reminder date and time:</label>
-                        <input type="date" class="wantedRdate" id="wantedRdate" value="dd/mm/yyyy" required>
-                        <input type="time" class="wantedRtime" id="wantedRtime" value="hh:mm am/pm" required>
+                        <input type="date" class="wantedRdate" id="wantedRdate" required>
+                        <input type="time" class="wantedRtime" id="wantedRtime" required>
                     </div>
                     <div class="remiButtons">
                         <input type="submit" class="AddRemi" id="AddRemi" value="Add reminder" onclick="AddReminder()">
@@ -40,10 +44,21 @@
             <hr>
         </div>
         <div class="remindersDiv" id="remindersDiv">
+            <!-- i made this hidden div so i can use this style when creating its hiiden so only i know its there  -->
 
-            <div hidden class="reminderImg">
+            <div class="reminderImg" hidden>
+                <div class="wantedDate" id="wantedDate">
+                    <input type="date" class="Rdate" id="Rdate">
+                    <input type="time" class="Rtime" id="Rtime">
+                </div>
+                <div class="deleteButton">
+                    <button type="button" class="bi bi-trash" id="delBtn"
+                        style="color:#e0bbe4; font-size: 20px;border-color: unset;background-color: transparent;"></button>
+                </div>
+
                 <textarea class="RemiContent" id="RemiContent" placeholder="Take a note ... " cols="8" rows="5">
                 </textarea>
+
             </div>
 
 
