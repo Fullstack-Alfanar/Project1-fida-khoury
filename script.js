@@ -161,10 +161,11 @@ function checkDate(rDate, rTime) {
             //flag equal to one if the reminder is for today
             if (parseInt(yyyy) == yyyyCurr && mmCurr == parseInt(mm) && ddCurr == parseInt(dd))
                 flag = 1;
+                console.log(flag);
             if (rTime[2] == ":" && rTime.length == 5) {
                 hour = rTime[0] + rTime[1];
                 min = rTime[3] + rTime[4];
-                if ((flag == 1 && today.getMinutes() < parseInt(min) && parseInt(min) < 60 && today.getHours() <= parseInt(hour) && parseInt(hour) < 24) || (flag == 0 && 0 <= parseInt(min) && parseInt(min) < 60 && 0 <= parseInt(hour) && parseInt(hour) < 24))
+                if ((flag == 1 && today.getMinutes() < parseInt(min) && parseInt(min) < 60 && today.getHours() <= parseInt(hour) && parseInt(hour) < 24) ||(flag == 1 && today.getMinutes() >= parseInt(min) && parseInt(min) >0 && today.getHours() < parseInt(hour) && parseInt(hour) < 24) || (flag == 0 && 00 <= parseInt(min) && parseInt(min) < 60 && 00<= parseInt(hour) && parseInt(hour) < 24))
                     return true;
                 else {
                     alert("invalid time ");
