@@ -70,7 +70,7 @@ function AddReminder() {
         TimeR.type = "time";
         DateR.className = "Rdate";
         TimeR.className = "Rtime";
-        rDiv.style = "display: flex;justify-content: center;flex-direction: column;background-image: url('images/stickynote.png');"
+        rDiv.style = "display: flex;justify-content: center;flex-direction: column;background-image: url('images\stickynote.png');"
         delBtn.type = "button";
         delBtn.style = "color:#e0bbe4; font-size: 20px;border-color: unset;background-color: transparent;";
         //here i declare an anonymous function beacuse we only going to use it when the trash button is pressed 
