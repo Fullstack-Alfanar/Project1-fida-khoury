@@ -171,7 +171,8 @@ hr {
 
 /*stayling the reminder task/image*/
 .reminderImg {
-    background-image: url("images/stickynote.png");
+    background-image: url("https://i.pinimg.com/originals/71/6d/60/716d609bcb461d893984f74648498124.png");
+    background-size: contain;
     height: 350px;
     width: 350px;
     animation: 4s linear fadein;
